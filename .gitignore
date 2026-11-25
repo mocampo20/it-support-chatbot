@@ -13,7 +13,11 @@ __pycache__/
 
 # Local databases
 *.db
+*.db-journal
+*.db-wal
+*.db-shm
 *.sqlite3
+# Generated vector databases (rebuilt from it_sector.txt)
 chroma_db/
 
 # Streamlit secrets
@@ -24,3 +28,5 @@ chroma_db/
 
 # Testing
 .pytest_cache/
+# Logs
+*.log

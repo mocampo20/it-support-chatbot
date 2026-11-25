@@ -1,0 +1,13 @@
+anthropic>=2.14.0
+python-dotenv>=1.0.0
+streamlit>=1.50.0
+
+# RAG
+voyageai>=0.3.0
+chromadb>=1.0.0
+
+# MCP ticket server and client (official Python SDK, FastMCP API of the 1.x series)
+mcp>=1.10.0,<2
+
+# Tests
+pytest>=8.0.0

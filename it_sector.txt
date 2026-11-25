@@ -1,0 +1,268 @@
+# IT Support Knowledge Base (fictional sample documentation)
+
+This knowledge base contains fictional IT support procedures used to demonstrate
+Retrieval Augmented Generation (RAG). Names, URLs, phone extensions and policies
+are examples only and do not describe any real organization. Example URLs use the
+reserved domain example.com.
+
+## Contacting the IT Service Desk
+
+The IT Service Desk helps with accounts, devices, software, network and security issues.
+
+- Self-service portal: https://support.example.com (open a ticket, track requests, read guides).
+- Phone: internal extension 5555, Monday to Friday, 08:00-18:00.
+- Urgent security incidents (suspected hacking, lost device, ransomware): call extension 5555 and choose option 1 at any time, 24/7.
+
+When opening a ticket, include: your username, device name (shown on the label or in Settings > System > About), a clear description of the problem, when it started, any error message (a screenshot is ideal) and what you already tried.
+
+Ticket priorities: P1 (whole team blocked or security incident) - response within 30 minutes; P2 (one person blocked) - response within 4 business hours; P3 (inconvenience or request) - response within 2 business days.
+
+## Password reset (self-service)
+
+Use the self-service password reset (SSPR) portal when you forgot your password or it has expired.
+
+1. Go to https://passwordreset.example.com from any device (a phone works).
+2. Enter your work email address and complete the CAPTCHA.
+3. Verify your identity with one of your registered methods: authenticator app notification, SMS code or security questions.
+4. Choose a new password that meets the password policy (see "Password policy").
+5. Sign in again on every device that uses your account (laptop, phone mail app, Wi-Fi) with the new password, otherwise the old password saved on those devices may lock your account.
+
+If you never registered SSPR methods, contact the IT Service Desk; an agent will verify your identity with a video call or in person before resetting the password. IT staff will never ask you to tell them your current password.
+
+## Password policy
+
+- Minimum 14 characters. A passphrase of several unrelated words is recommended (example format: four random words plus a number).
+- Do not reuse any of your last 10 passwords.
+- Passwords expire every 365 days, or immediately if a compromise is suspected.
+- Never reuse your work password on personal websites.
+- Store passwords only in the approved password manager; never in documents, sticky notes or browser notes.
+- Never share your password with anyone, including IT staff or your manager.
+
+## Account locked out
+
+Your account locks for 15 minutes after 10 failed sign-in attempts.
+
+1. Wait 15 minutes; the lock is removed automatically.
+2. If you recently changed your password, update it on every device first (phone email app, tablet, saved Wi-Fi profile, mapped drives). Old saved passwords are the most common cause of repeated lockouts.
+3. You can also unlock immediately through https://passwordreset.example.com by choosing "Unlock my account".
+4. If the account locks again repeatedly without you signing in, report it to the IT Service Desk as a possible security issue.
+
+## Multi-factor authentication (MFA) setup
+
+MFA is required for all accounts. The approved method is the Microsoft Authenticator app with number matching; SMS is allowed only as a backup method.
+
+1. Install Microsoft Authenticator on your smartphone from the official app store.
+2. On a computer, go to https://mysignins.example.com/security-info and sign in.
+3. Select "Add sign-in method" > "Authenticator app" and follow the wizard.
+4. Scan the QR code shown on screen with the app.
+5. Approve the test notification by typing the number shown on the computer screen into the app.
+6. Add a phone number as a backup method.
+
+Tip: never approve an MFA prompt you did not start. Repeated unexpected prompts ("MFA fatigue") mean someone may know your password: deny the request, change your password and report it to the IT Service Desk.
+
+## MFA - new phone, lost phone or not receiving prompts
+
+New phone (old phone still available): add the Authenticator app on the new phone first through https://mysignins.example.com/security-info, confirm it works, then remove the old device from the list.
+
+Lost or stolen phone: call the IT Service Desk (extension 5555). After identity verification, the agent will remove the old MFA methods and issue a Temporary Access Pass valid for 8 hours so you can register the new phone. If the phone had company email, also follow "Lost or stolen device".
+
+Not receiving prompts:
+1. Check the phone has internet access and the correct date and time (automatic time enabled).
+2. Make sure notifications are allowed for the Authenticator app and that battery saver is not blocking it.
+3. Open the Authenticator app manually; pending requests often appear when the app is opened.
+4. Use the one-time code shown in the app as an alternative ("Use a verification code").
+5. If still failing, use your backup SMS method and contact the IT Service Desk.
+
+## VPN - connecting from home or travelling
+
+The company uses the GlobalConnect VPN client (fictional) for access to internal resources such as file shares and the intranet. Cloud apps like email and Teams do not need the VPN.
+
+1. Connect to the internet first (home Wi-Fi, hotspot or hotel network; complete any hotel login page before starting the VPN).
+2. Open the GlobalConnect client from the system tray or Start menu.
+3. Portal address: vpn.example.com (pre-configured on company laptops).
+4. Sign in with your work email and password and approve the MFA prompt.
+5. The tray icon turns green when connected.
+
+Disconnect the VPN when you no longer need internal resources to improve video call quality.
+
+## VPN troubleshooting
+
+- "Gateway unreachable" or timeout: check internet access by opening a public website. Restart your home router if needed. Public networks sometimes block VPN traffic; try a mobile hotspot.
+- Authentication failed: verify your password works on https://support.example.com. Expired passwords must be reset before the VPN will accept them. Make sure you approved the MFA prompt.
+- Connected but internal sites do not open: disconnect and reconnect, then run "ipconfig /flushdns" in Command Prompt. Make sure no other VPN (personal VPN apps) is running at the same time.
+- Frequent disconnections: switch from Wi-Fi to a wired connection if possible, move closer to the router, and disable battery saver mode while on VPN.
+- Client missing or damaged: reinstall "GlobalConnect VPN" from the Company Portal (see "Installing software").
+
+If none of these steps work, open a ticket including the exact error message, your location type (home, hotel, client site) and the time of the failure.
+
+## Wi-Fi - office network
+
+Office Wi-Fi networks:
+- CORP-SECURE: for company-managed laptops and phones. Uses certificate authentication, connects automatically, no password needed.
+- CORP-GUEST: for visitors and personal devices (see "Wi-Fi - guest access").
+
+If a company laptop does not connect to CORP-SECURE:
+1. Turn Wi-Fi off and on, or toggle Airplane mode for 10 seconds.
+2. In Wi-Fi settings, select CORP-SECURE > "Forget", then reconnect. It should connect without asking for a password; if it asks, do not type your password - cancel and continue to the next step.
+3. Make sure the laptop has been connected to the company network (office cable or VPN) in the last 30 days so its device certificate is renewed.
+4. Restart the laptop.
+5. Try a network cable at a desk dock to confirm the laptop works on the wired network.
+
+If several people in the same area cannot connect, report it as a possible access point outage and include the floor and room.
+
+## Wi-Fi - guest access and home Wi-Fi tips
+
+Guest access: visitors connect to CORP-GUEST and open a browser; the welcome page asks for the visitor's email and the sponsoring employee's email. The sponsor approves the request by email. Access is valid for 24 hours. Guest Wi-Fi is internet-only and cannot reach internal systems.
+
+Home Wi-Fi tips for remote work:
+- Place the laptop closer to the router or use the 5 GHz network for better speed.
+- Restart the router if the connection is slow or dropping.
+- Use WPA2 or WPA3 encryption and change the router's default admin password.
+- Run a speed test; at least 10 Mbps upload/download is recommended for video calls.
+
+## Outlook - email not syncing or Outlook not opening
+
+Email not arriving or not sending:
+1. Check the status bar at the bottom of Outlook. "Working offline" means you must select Send/Receive > "Work Offline" to turn it off. "Disconnected" means check your internet connection.
+2. Check the Outbox folder for stuck messages; large attachments (over 25 MB) cannot be sent - share a OneDrive link instead.
+3. Check the web version at https://mail.example.com. If mail works there, the problem is the Outlook app on your computer.
+4. Close and reopen Outlook, then restart the computer.
+
+Outlook does not open or freezes:
+1. Start Outlook in safe mode: press Windows + R, type "outlook.exe /safe" and press Enter. If it works in safe mode, disable add-ins in File > Options > Add-ins (COM Add-ins > Go).
+2. Repair the Office installation: Settings > Apps > Microsoft 365 > Modify > Quick Repair.
+3. As a last resort, IT can create a new Outlook profile for you. Your email is stored on the server, so it is not lost.
+
+## Outlook - mailbox full, shared mailboxes and calendars
+
+Mailbox full: the standard mailbox size is 50 GB. When you receive "mailbox almost full" warnings:
+- Empty the Deleted Items and Junk folders.
+- Sort folders by size and delete or archive large messages.
+- Enable the Online Archive (ask the IT Service Desk if it is not visible).
+
+Shared mailbox: request access through a ticket with the approval of the mailbox owner. After access is granted, the mailbox appears automatically in Outlook within 1 hour (restart Outlook). To send from it, select From > Other email address in a new message.
+
+Sharing your calendar: in Outlook Calendar, right-click your calendar > Sharing permissions > Add, choose the colleague and the permission level (for example "Can view titles and locations").
+
+## Printers - adding a printer
+
+Office printers use secure "follow-me" printing (fictional service PrintSafe):
+1. On a company laptop, open the Company Portal and install "PrintSafe Queue". This adds one printer called "PrintSafe-Secure".
+2. Print your document to "PrintSafe-Secure".
+3. Go to any office printer and tap your badge on the card reader (or sign in with your username and PIN).
+4. Select your job and press "Print". Jobs are deleted automatically after 24 hours if not released.
+
+Personal home printers can be added through Settings > Bluetooth & devices > Printers & scanners > Add device. If a driver installation requires administrator rights, request it through the Company Portal or the IT Service Desk.
+
+## Printers - troubleshooting
+
+- Job does not appear at the printer: make sure you printed to "PrintSafe-Secure", that the laptop is on the office network or VPN, and wait one minute before tapping your badge again.
+- Badge not recognized: register your badge at the printer by tapping it and signing in once with username and PIN, or contact the IT Service Desk.
+- Paper jam: follow the animation on the printer screen; open only the doors indicated. Never pull paper out of the fuser area (it is hot).
+- Poor print quality (streaks, faded text): report the printer ID (sticker on the front) through the self-service portal; toner is replaced by the facilities team.
+- Printer offline on a home printer: turn the printer off and on, confirm it is on the same Wi-Fi network as the laptop, then remove and re-add it in Printers & scanners.
+- Stuck print queue on your laptop: open Settings > Printers & scanners > select the printer > Open print queue > cancel all documents, then restart the computer.
+
+## Installing software
+
+Standard users do not have administrator rights on company devices. Install approved software yourself through the Company Portal:
+
+1. Open "Company Portal" from the Start menu (macOS: Applications folder).
+2. Browse or search for the application (for example: Zoom, Adobe Acrobat Reader, 7-Zip, Python, Visual Studio Code).
+3. Select "Install". The installation runs in the background; you can keep working.
+4. Restart the application or computer if prompted.
+
+Software not in the Company Portal: submit a "Software request" ticket including the software name, version, business justification and whether a paid license is required. The security team reviews new software within 5 business days. Paid software also needs your manager's approval for the license cost.
+
+Never install software downloaded from unofficial websites, cracked software or browser extensions that are not approved; these are a common source of malware.
+
+## Software updates and licenses
+
+- Windows and Microsoft 365 updates are installed automatically. Save your work and restart when prompted; the laptop forces a restart after a 3-day grace period for security updates.
+- To check for updates manually: Settings > Windows Update > Check for updates.
+- Microsoft 365 "unlicensed product" or "product deactivated" message: sign out of Office (File > Account > Sign out), restart, and sign in again with your work account. If it persists, open a ticket: your license assignment may need to be refreshed.
+- Licenses for paid software are assigned to people, not devices. When you no longer need a paid application, tell the IT Service Desk so the license can be reused.
+
+## Cybersecurity - phishing and suspicious emails
+
+Signs of phishing:
+- Urgent or threatening language ("your account will be closed today").
+- Sender address that does not match the displayed name or uses a look-alike domain.
+- Unexpected attachments (especially .zip, .html, .exe or macro-enabled Office files) or requests to enable content.
+- Links whose real address (hover with the mouse to see it) does not match the expected website.
+- Requests for passwords, MFA codes, gift cards or changes to bank details.
+
+What to do:
+1. Do not click links, open attachments or reply.
+2. Use the "Report phishing" button in Outlook. This sends the message to the security team and removes it from your inbox.
+3. If you already clicked a link or entered your password: change your password immediately at https://passwordreset.example.com and call the IT Service Desk security line (extension 5555, option 1).
+
+Payment or bank detail change requests received by email must always be verified by phone using a number from a trusted source, never the number in the email.
+
+## Cybersecurity - malware, suspicious behaviour and lost devices
+
+Possible malware infection signs: pop-ups, unknown programs, files that will not open or have strange extensions, a ransom message, or security software alerts.
+1. Disconnect from the network immediately: turn off Wi-Fi and unplug the network cable. Do not shut down the computer (evidence is lost).
+2. Do not try to clean the infection yourself and do not pay any ransom.
+3. Call the security line: extension 5555, option 1, available 24/7.
+
+Lost or stolen device (laptop, phone or tablet with company data):
+1. Report it to the IT Service Desk security line immediately, even outside business hours.
+2. IT will remotely lock and, if needed, wipe the device. Company laptops are encrypted with BitLocker, so data is protected while the device is locked.
+3. Change your password from another device.
+4. For theft, also file a police report and share the report number in your ticket.
+
+## Cybersecurity - good practices
+
+- Lock your screen whenever you leave your desk: press Windows + L (macOS: Control + Command + Q).
+- Store work files in OneDrive or SharePoint, not only on the local disk or USB drives. Personal USB storage devices are blocked on company laptops.
+- Use only approved cloud services for company data; do not upload company documents to personal email or personal cloud storage.
+- Be careful on public Wi-Fi: use the VPN for internal resources and avoid entering sensitive information on unknown networks.
+- Keep your devices updated and restart them at least once a week.
+- Complete the mandatory security awareness training every year.
+
+## Troubleshooting - general first steps
+
+Before contacting the IT Service Desk, try these steps; they solve most common issues:
+1. Restart the computer (choose Restart, not Shut down; Windows Fast Startup can keep problems after a shutdown).
+2. Check the basics: cables, power, Wi-Fi connection, volume or mute buttons, external monitor input source.
+3. Install pending updates: Settings > Windows Update.
+4. Close and reopen the application. Try the web version of the application if one exists.
+5. Note the exact error message and take a screenshot (Windows + Shift + S).
+6. Check the self-service portal https://support.example.com for known outages.
+
+If the problem continues, open a ticket and include what you tried.
+
+## Troubleshooting - slow computer and low disk space
+
+Slow computer:
+1. Restart the computer if it has not been restarted for several days.
+2. Open Task Manager (Ctrl + Shift + Esc) and sort by CPU or Memory to find programs using many resources; close the ones you do not need.
+3. Close unused browser tabs; each tab uses memory.
+4. Disable unnecessary startup apps: Task Manager > Startup apps.
+5. Make sure the laptop is plugged in and set to a balanced or best performance power mode.
+
+Low disk space:
+1. Run Settings > System > Storage > Temporary files and remove temporary files and the Recycle Bin.
+2. Turn on OneDrive "Files On-Demand" so files stay in the cloud until you open them.
+3. Move large personal files (videos, photos) off the company laptop.
+4. Keep at least 15% of the disk free for updates to install correctly.
+
+If the laptop is older than 4 years, ask about the hardware refresh program.
+
+## Troubleshooting - browser, Teams audio and video, and display issues
+
+Browser problems (pages not loading or showing errors):
+- Try an InPrivate/Incognito window. If it works there, clear the browser cache and cookies (Ctrl + Shift + Delete) and disable recently added extensions.
+- The supported browsers are Microsoft Edge and Google Chrome, both updated automatically.
+
+Teams audio or video problems:
+- In Teams, open Settings > Devices and select the correct speaker, microphone and camera; make a test call.
+- Check the physical camera privacy shutter and the mute key on the keyboard or headset.
+- Close other apps that may use the camera (other meeting tools).
+- Use a wired network connection or disconnect the VPN during calls if quality is poor.
+
+External monitor not detected:
+- Check the cable and the monitor's input source, then press Windows + P and choose "Extend" or "Duplicate".
+- Open Settings > System > Display > "Detect".
+- Disconnect and reconnect the dock, then restart the laptop.
